@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="index.css">
+    <title>Final Score</title>
+    <style>
+        .center-text {
+            text-align: center;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <div class="adid">
+    <h1>Final Score</h1>
+    
+    <p>Stored value from Level 1: <span id="level1Value">Calculating...</span></p>
+    <p>Stored value from Level 2: <span id="level2Value">Calculating...</span></p>
+    <p>Total: <span id="totalValue">Calculating...</span></p>
+    
+   
+    <p id="congratulations">Congratulations! You have won a Traditional Dress from PUAK TUTONG</p>
+   
+    <img id="picture" src="puaktutong.jpg" style="display: none; width: 150px; height: auto;">
+    <p class="center-text">Pakaian Tradisi Puak Tutong mengandungi ‘Gegatar’ di kepala dihiasi juntaian cantuman manik berwarna-warni dan ‘Sesandang’ di kedua-dua belah bahu serta kain tenunan - gambar diperolehi dari https://mediapermata.com.bn/</p>
+    <a href="selectlanguage.html" class="center-text"><button>Play Again</button></a>
+    <script>
+        const level1Value = parseInt(localStorage.getItem("level1Value")) || 0;
+        const level2Value = parseInt(localStorage.getItem("level2Value")) || 0;
+        const totalValue = level1Value + level2Value;
+        const timer=setTimeout(delay,2000)
+
+        function delay(){
+            document.getElementById("level1Value").textContent = level1Value;
+        document.getElementById("level2Value").textContent = level2Value;
+        document.getElementById("totalValue").textContent = totalValue;
+        document.getElementById("picture").style.display="block";
+        }
+       
+       
+    </script>
+    
+</body>
+</html>

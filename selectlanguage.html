@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Navigation Example</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+
+<body>
+    <div class="adid1">
+    <div class="front">
+        <div class="Ftitle">
+            <h1>Select Bahasa:</h1>
+        </div>
+
+        <div>
+            <div class="Dselect">
+                <select id="districtSelect">
+                    <option value="Tutong">Tutong</option>
+                    <option value="Belait">Belait</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <button id="navigateButton">Go</button>
+        </div>
+    </div>
+    </div>
+    <script>
+        const selectElement = document.getElementById('districtSelect');
+        const navigateButton = document.getElementById('navigateButton');
+
+        navigateButton.addEventListener('click', () => {
+            const selectedValue = selectElement.value;
+            if (selectedValue === 'Tutong') {
+                window.location.href = 'level1tutong.html';
+            } else if (selectedValue === 'Belait') {
+                window.location.href = 'level1belait.html';
+            }
+        });
+    </script>
+</body>
+
+</html>

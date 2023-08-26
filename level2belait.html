@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="index.css">
+    <title>LEVEL 2</title>
+</head>
+<body>
+    <div class="adid1"></div>
+    <h1>SUSUN AYAT BELAIT</h1>
+    <div>
+
+        <label for="numberInput">Enter your score:</label>
+        <input type="number" id="numberInput">
+
+        <button onclick="checkResultAndStoreValue()">Check Result</button>
+        
+    <button onclick="navigateToAnotherPage()">Check Final Score</button>
+    </div>
+
+    <p id="resultOutput"></p>
+
+
+    <iframe allowfullscreen height="690" frameborder="0" src="https://www.educaplay.com/game/15820638-bahasa_belait_brunei_level_2.html"></iframe>
+    
+
+    
+    
+    
+    <script>
+        function checkResultAndStoreValue() {
+            var number = parseInt(document.getElementById("numberInput").value);
+            var resultOutput = document.getElementById("resultOutput");
+            
+            if (!isNaN(number)) {
+                if (number < 80) {
+                    resultOutput.textContent = "Try again!!";
+                } else {
+                    resultOutput.textContent = "Congratulations! You have a reward";
+                    storeValue(number); // Call the storeValue function with the score
+                }
+            } else {
+                resultOutput.textContent = "Please enter a valid number.";
+            }
+        }
+        
+        function storeValue(score) {
+            localStorage.setItem("level2Value", score);
+            alert("Value stored: " + score);
+        }
+        
+        function navigateToAnotherPage() {
+            window.location.href = "finalscore2.html";
+        }
+    </script>
+</body>
+</html>
