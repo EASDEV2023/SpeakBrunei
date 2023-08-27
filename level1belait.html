@@ -16,17 +16,20 @@
 <body>
     <div class="adid">
         <h1>MAKNA BAHASA BELAIT</h1>
+   
+        <iframe allowfullscreen height="550" frameborder="0" src="https://www.educaplay.com/game/15820615-bahasa_belait_brunei_level_1.html"></iframe>
+        <p id="paragraph"></p>
+
         <label for="numberInput">Enter your score:</label>
         <input type="number" id="numberInput">
         <button id="checkButton" onclick="checkResultAndStoreValue()">Check Result</button>
         <p id="resultOutput"></p>
     
-        <div id="navigateButton" style="display: none;">
-            <button id="navigateButton" onclick="navigateToAnotherPage()">LEVEL 2</button>
+            <div id="navigateButton" style="display: none;">
+                <button id="navigateButton" onclick="navigateToAnotherPage()">LEVEL 2</button>
+            </div>
+
         </div>
-        <p id="paragraph"></p>
-        <iframe allowfullscreen height="650" frameborder="0" src="https://www.educaplay.com/game/15820615-bahasa_belait_brunei_level_1.html"></iframe>
-        
         <script>
             function storeValue() {
                 localStorage.setItem("level1Value", document.getElementById("numberInput").value);
@@ -43,8 +46,8 @@
                         resultOutput.textContent = "Please try again";
                     } else {
                         resultOutput.textContent = "Congratulations!! You may proceed to Level 2";
-                        navigateButton.style.display = "block"; // Display the button
-                        storeValue(); // Call the storeValue function
+                        navigateButton.style.display = "block"; 
+                        storeValue(); 
                     }
                 } else {
                     resultOutput.textContent = "Please enter a valid number.";
@@ -53,7 +56,10 @@
             
             function navigateToAnotherPage() {
                 window.location.href = "level2belait.html";
+        
             }
+
+            
         </script>
     </div>
 </body>
