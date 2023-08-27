@@ -20,10 +20,19 @@
     
    
     <p id="congratulations">Congratulations! You have won a Traditional Dress from PUAK TUTONG</p>
+
    
     <img id="picture" src="puaktutong.jpg" style="display: none; width: 150px; height: auto;">
     <p class="center-text">Pakaian Tradisi Puak Tutong mengandungi ‘Gegatar’ di kepala dihiasi juntaian cantuman manik berwarna-warni dan ‘Sesandang’ di kedua-dua belah bahu serta kain tenunan - gambar diperolehi dari https://mediapermata.com.bn/</p>
+    
+    
     <a href="selectlanguage.html" class="center-text"><button>Play Again</button></a>
+    
+    <button id="feedback" onclick="navigateToLink()">LEAVE YOUR FEEDBACK</button> 
+
+   
+    
+
     <script>
         const level1Value = parseInt(localStorage.getItem("level1Value")) || 0;
         const level2Value = parseInt(localStorage.getItem("level2Value")) || 0;
@@ -31,12 +40,17 @@
         const timer=setTimeout(delay,2000)
 
         function delay(){
-            document.getElementById("level1Value").textContent = level1Value;
+        document.getElementById("level1Value").textContent = level1Value;
         document.getElementById("level2Value").textContent = level2Value;
         document.getElementById("totalValue").textContent = totalValue;
         document.getElementById("picture").style.display="block";
+    
         }
        
+        function navigateToLink() {
+    window.open("https://bit.ly/SpeakBruneiFeedback", "_blank");
+}
+
        
     </script>
     
