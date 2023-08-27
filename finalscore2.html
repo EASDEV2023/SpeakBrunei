@@ -24,6 +24,9 @@
     <img id="picture" src="puakbelait.jpg" style="display: none; width: 450px; height: auto;">
     <p class="center-text">Kayu atau Alu digunakan dalam PUAK BELAIT dalam Tarian ALAI SEKAP - gambar diperolehi dari http://bruneiresources.blogspot.com/</p>
     <a href="selectlanguage.html" class="center-text"><button>Play Again</button></a>
+
+    <button id="feedback" onclick="navigateToLink()">LEAVE YOUR FEEDBACK</button> 
+
     <script>
         const level1Value = parseInt(localStorage.getItem("level1Value")) || 0;
         const level2Value = parseInt(localStorage.getItem("level2Value")) || 0;
@@ -36,7 +39,10 @@
         document.getElementById("totalValue").textContent = totalValue;
         document.getElementById("picture").style.display="block";
         }
-       
+          
+        function navigateToLink() {
+    window.open("https://bit.ly/SpeakBruneiFeedback", "_blank");
+}
        
     </script>
     
