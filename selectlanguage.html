@@ -4,27 +4,41 @@
 <head>
     <title>Select Bahasa</title>
     <link rel="stylesheet" type="text/css" href="index.css" />
+    <style>
+        #navigateButton {
+            font-size: 20px; /* Adjust this value to make the button larger */
+        }
+
+        #districtSelect {
+            font-size: 16px; /* Adjust this value to change the font size */
+            height: 40px; /* Adjust this value to change the height */
+        }
+    </style>
 </head>
 
 <body>
     <div class="adid1">
-    <div class="front">
-        <div class="Ftitle">
-            <h1>Select Bahasa:</h1>
-        </div>
+        <div class="front">
+            <div class="Ftitle">
+            </div>
+            
+           
+            <img src="brunei.gif" alt="GIF Image" width="650" height="200">
 
-        <div>
-            <div class="Dselect">
-                <select id="districtSelect">
-                    <option value="Tutong">Tutong</option>
-                    <option value="Belait">Belait</option>
-                </select>
+            <div>
+                <h1>SELECT BAHASA:</h1>
+           
+                <div class="Dselect">
+                    <select id="districtSelect">
+                        <option value="Tutong">Tutong</option>
+                        <option value="Belait">Belait</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button id="navigateButton">Go</button>
             </div>
         </div>
-        <div>
-            <button id="navigateButton">Go</button>
-        </div>
-    </div>
     </div>
     <script>
         const selectElement = document.getElementById('districtSelect');
