@@ -4,23 +4,30 @@
 <head>
     <link type="text/css" rel="stylesheet" href="index.css">
     <title>LEVEL 1</title>
+    <style>
+    
+        #checkButton, #navigateButton {
+            font-size: 20px; 
+            width: 500px; 
+        }
+    </style>
 </head>
+
 
 <body>
     <div class="adid">
         <h1>MAKNA BAHASA TUTONG</h1>
             <label for="numberInput">Enter your score:</label>
             <input type="number" id="numberInput">
-    
-            <button onclick="checkResultAndStoreValue()">Check Result</button>
+            <button id="checkButton" onclick="checkResultAndStoreValue()">Check Result</button>
+         
             <p id="resultOutput"></p>
 
-
             <div id="navigateButton" style="display: none;">
-                <button onclick="navigateToAnotherPage()">LEVEL 2</button>
+                <button id="navigateButton" onclick="navigateToAnotherPage()">LEVEL 2</button>
             </div>
             
-            <iframe allowfullscreen height="650" frameborder="0" 
+            <iframe allowfullscreen height="450" frameborder="0" 
             src="https://www.educaplay.com/game/15753807-bahasa_tutong_brunei.html"></iframe>
         
     <script>
@@ -34,8 +41,8 @@
                     resultOutput.textContent = "Please try again";
                 } else {
                     resultOutput.textContent = "Congratulations!! You may proceed to Level 2";
-                    navigateButton.style.display = "block"; // Display the button
-                    storeValue(); // Call the storeValue function
+                    navigateButton.style.display = "block"; 
+                    storeValue(); 
                 }
             } else {
                 resultOutput.textContent = "Please enter a valid number.";
@@ -47,7 +54,7 @@
         }
 
         function navigateToAnotherPage() {
-            window.location.href = "level2tutong.html";
+            window.location.href = "level2Tutong.html";
         }
 
         function storeValue() {
