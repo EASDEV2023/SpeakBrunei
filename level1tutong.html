@@ -5,6 +5,11 @@
     <link type="text/css" rel="stylesheet" href="index.css">
     <title>LEVEL 1</title>
     <style>
+    
+        #checkButton, #navigateButton {
+            font-size: 20px; 
+            width: 500px; 
+        }
     </style>
 </head>
 
@@ -12,14 +17,12 @@
 <body>
     <div class="adid">
         <h1>MAKNA BAHASA TUTONG</h1>
-
-        <h2>Please click the start button to play the game.Click the square button to enlarge the screen.</h2>
-        
+        <h2>Please click PLAY to start</h2> 
            
             <iframe allowfullscreen height="550" frameborder="0" 
             src="https://www.educaplay.com/game/15753807-bahasa_tutong_brunei.html"></iframe>
             <p id="paragraph"></p>
-            <div class="adid2">
+
             <label for="numberInput">Enter your score:</label>
             <input type="number" id="numberInput">
             <button id="checkButton" onclick="checkResultAndStoreValue()">Check Result</button>
@@ -40,7 +43,7 @@
                 if (number < 80) {
                     resultOutput.textContent = "Please try again";
                 } else {
-                    resultOutput.textContent = "Congratulations! You may proceed to Level 2";
+                    resultOutput.textContent = "Congratulations!! You may proceed to Level 2";
                     navigateButton.style.display = "block"; 
                     storeValue(); 
                 }
